@@ -4,10 +4,10 @@
 function ent_armchair(m)
 	Mesh.box(m, 10.0, 1.0, 0.06, 11.0, 2.0, 0.42, C.yellow)
 	Mesh.box(m, 10.2, 1.25, 0.42, 10.8, 1.98, 0.56, C.butter)
-	Mesh.box(m, 10.0, 1.0, 0.42, 11.0, 1.28, 1.15, C.yellow)
+	Mesh.box(m, 10.04, 1.0, 0.42, 10.96, 1.28, 1.15, C.yellow)
 	Mesh.blob(m, 10.5, 1.14, 1.0, 1.22, 0.5, 0.06, 10, C.gold)
-	Mesh.box(m, 10.0, 1.0, 0.42, 10.2, 2.0, 0.75, C.gold)
-	Mesh.box(m, 10.8, 1.0, 0.42, 11.0, 2.0, 0.75, C.gold)
+	Mesh.box(m, 10.0, 0.97, 0.42, 10.2, 2.0, 0.75, C.gold)
+	Mesh.box(m, 10.8, 0.97, 0.42, 11.0, 2.0, 0.75, C.gold)
 	Mesh.cbox(m, 10.08, 1.92, 0, 0.04, 0.04, 0.06, C.wood_dk)
 	Mesh.cbox(m, 10.92, 1.92, 0, 0.04, 0.04, 0.06, C.wood_dk)
 	Mesh.box(m, 10.35, 1.3, 0.56, 10.65, 1.42, 0.82, C.pink)
@@ -53,7 +53,7 @@ end
 function ent_misc(m)
 	-- door mat
 	Mesh.box(m, 12.1, 0.2, 0.02, 13.3, 0.8, 0.035, C.coral)
-	Mesh.box(m, 12.25, 0.3, 0.035, 13.15, 0.7, 0.045, C.rose)
+	Mesh.box(m, 12.25, 0.3, 0.035, 13.15, 0.7, 0.052, C.rose)
 	-- coat rack
 	Mesh.cyl(m, 15.55, 2.6, 0, 0.05, 0.2, 0.18, 8, C.wood_dk, C.wood_dk, C.wood_dk)
 	Mesh.cbox(m, 15.55, 2.6, 0.05, 0.03, 0.03, 1.85, C.wood_dk)

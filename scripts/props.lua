@@ -106,8 +106,8 @@ end
 
 function cup_model(name, full)
 	local m = Mesh.new()
-	Mesh.cyl(m, 0, 0, 0, 0.012, 0.12, 0.12, 10, C.white, C.white, C.white)
-	Mesh.cyl(m, 0, 0, 0.012, 0.1, 0.065, 0.085, 10, C.white, C.white, C.white)
+	Mesh.cyl(m, 0, 0, 0, 0.02, 0.12, 0.12, 10, C.white, C.white, C.white)
+	Mesh.cyl(m, 0, 0, 0.02, 0.1, 0.065, 0.085, 10, C.white, C.white, C.white)
 	if full then
 		Mesh.disc(m, 0, 0, 0.09, 0.075, 10, C.tea)
 	else

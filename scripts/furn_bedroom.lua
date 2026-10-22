@@ -16,7 +16,7 @@ function bed_frame(m)
 	Mesh.box(m, 1.9, 3.8, 0.6, 2.05, 3.95, 0.61, C.pink)
 	Mesh.box(m, 2.45, 4.25, 0.6, 2.6, 4.4, 0.61, C.pink)
 	Mesh.box(m, 3.0, 3.75, 0.6, 3.15, 3.9, 0.61, C.pink)
-	Mesh.box(m, 1.47, 3.38, 0.25, 3.53, 3.4, 0.6, C.lilac)
+	Mesh.box(m, 1.45, 3.35, 0.25, 3.55, 3.4, 0.62, C.lilac)
 	W.block(1.45, 3.4, 3.55, 5.88)
 	local it = W.add_item("bed", "BED", 2.5, 4.4, 1.45, 3.4, 0, 3.55, 5.88, 1.1)
 	it.sx = 2.5
@@ -55,7 +55,7 @@ end
 function bed_rug(m)
 	Mesh.box(m, 1.2, 1.6, 0.02, 3.8, 3.2, 0.036, C.lilac)
 	Mesh.box(m, 1.35, 1.75, 0.036, 3.65, 3.05, 0.05, C.cream)
-	Mesh.disc(m, 2.5, 2.4, 0.055, 0.35, 8, C.rose)
+	Mesh.disc(m, 2.5, 2.4, 0.066, 0.35, 8, C.rose)
 end
 
 function bed_curtains(m)
@@ -105,8 +105,8 @@ function bedroom_build()
 	local c = Mesh.new()
 	Mesh.box(c, 1.49, 3.36, 0.5, 3.51, 4.92, 0.86, C.lavender)
 	Mesh.box(c, 1.49, 4.74, 0.86, 3.51, 4.96, 0.9, C.cream)
-	Mesh.box(c, 1.9, 3.8, 0.86, 2.05, 3.95, 0.87, C.pink)
-	Mesh.box(c, 3.0, 3.75, 0.86, 3.15, 3.9, 0.87, C.pink)
+	Mesh.box(c, 1.9, 3.8, 0.86, 2.05, 3.95, 0.88, C.pink)
+	Mesh.box(c, 3.0, 3.75, 0.86, 3.15, 3.9, 0.88, C.pink)
 	Mesh.finish(c, "bed_cover")
 	local ce = Mesh.place("bed_cover")
 	ce.z = -5

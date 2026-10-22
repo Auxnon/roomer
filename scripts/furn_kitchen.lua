@@ -3,7 +3,9 @@
 function kit_counters(m)
 	Mesh.box(m, 9.1, 11.2, 0, 15.0, 11.9, 0.08, C.shadow)
 	Mesh.box(m, 9.1, 11.25, 0.08, 15.0, 11.9, 0.9, C.sage)
-	Mesh.box(m, 9.08, 11.15, 0.9, 15.0, 11.92, 0.97, C.wood_lt)
+	-- the top stops at the stove so the two never share a plane
+	Mesh.box(m, 9.08, 11.15, 0.9, 13.1, 11.92, 0.97, C.wood_lt)
+	Mesh.box(m, 14.3, 11.15, 0.9, 15.0, 11.92, 0.97, C.wood_lt)
 	local k = 0
 	local x = 0
 	for k = 0, 7 do
@@ -17,7 +19,7 @@ function kit_counters(m)
 	W.block(9.1, 11.15, 15.0, 11.9)
 	-- the sink
 	Mesh.box(m, 11.6, 11.3, 0.97, 12.6, 11.82, 0.99, C.steel)
-	Mesh.box(m, 11.7, 11.38, 0.98, 12.5, 11.74, 0.995, C.grey)
+	Mesh.box(m, 11.7, 11.38, 0.98, 12.5, 11.74, 1.005, C.grey)
 	Mesh.box(m, 12.06, 11.8, 0.99, 12.14, 11.88, 1.3, C.steel)
 	Mesh.box(m, 12.06, 11.62, 1.24, 12.14, 11.88, 1.3, C.steel)
 	local it = W.add_item("sink", "SINK", 12.1, 11.5, 11.6, 11.2, 0, 12.6, 11.9, 1.3)
@@ -26,21 +28,21 @@ function kit_counters(m)
 end
 
 function kit_stove(m)
-	Mesh.box(m, 13.12, 11.22, 0.08, 14.28, 11.9, 0.9, C.white)
+	Mesh.box(m, 13.12, 11.22, 0.08, 14.22, 11.9, 0.9, C.white)
 	Mesh.box(m, 13.22, 11.19, 0.2, 14.18, 11.22, 0.7, C.grey_dk)
 	Mesh.box(m, 13.32, 11.18, 0.3, 14.08, 11.19, 0.6, C.screen)
 	Mesh.box(m, 13.3, 11.17, 0.74, 14.1, 11.2, 0.78, C.steel)
 	Mesh.box(m, 13.1, 11.15, 0.9, 14.3, 11.92, 0.97, C.ink)
-	Mesh.disc(m, 13.42, 11.55, 0.975, 0.2, 10, C.grey_dk)
-	Mesh.disc(m, 13.98, 11.55, 0.975, 0.16, 10, C.grey_dk)
+	Mesh.disc(m, 13.42, 11.55, 0.99, 0.2, 10, C.grey_dk)
+	Mesh.disc(m, 13.98, 11.55, 0.99, 0.16, 10, C.grey_dk)
 	Mesh.cbox(m, 13.4, 11.16, 0.82, 0.04, 0.02, 0.86, C.red)
 	Mesh.cbox(m, 13.98, 11.16, 0.82, 0.04, 0.02, 0.86, C.red)
 	local it = W.add_item("stove", "STOVE", 13.6, 11.5, 13.1, 11.15, 0, 14.3, 11.92, 1.1)
 	it.reach = 1.1
 	STOVE = it
 	local g = Mesh.new()
-	Mesh.disc(g, 13.42, 11.55, 0.99, 0.18, 10, C.burner)
-	Mesh.disc(g, 13.42, 11.55, 0.995, 0.1, 10, C.yellow)
+	Mesh.disc(g, 13.42, 11.55, 1.005, 0.18, 10, C.burner)
+	Mesh.disc(g, 13.42, 11.55, 1.02, 0.1, 10, C.yellow)
 	Mesh.finish(g, "burner_glow")
 	local ge = Mesh.place("burner_glow")
 	ge.z = -5
@@ -49,7 +51,7 @@ end
 
 function kit_fridge(m)
 	Mesh.box(m, 15.0, 11.0, 0, 15.9, 11.9, 2.1, C.sky)
-	Mesh.box(m, 15.05, 11.0, 0.05, 15.85, 11.05, 2.05, C.white)
+	Mesh.box(m, 15.05, 10.99, 0.05, 15.85, 11.05, 2.05, C.white)
 	Mesh.box(m, 15.08, 11.05, 1.3, 15.82, 11.08, 1.33, C.steel)
 	Mesh.box(m, 15.08, 11.05, 0.65, 15.82, 11.08, 0.68, C.steel)
 	-- what's inside (seen with the door open)
@@ -65,10 +67,10 @@ function kit_fridge(m)
 	Mesh.box(d, -0.9, -0.08, 0, 0, 0, 2.08, C.sky)
 	Mesh.box(d, -0.82, -0.1, 1.2, -0.76, -0.08, 1.7, C.steel)
 	Mesh.box(d, -0.82, -0.1, 0.5, -0.76, -0.08, 0.95, C.steel)
-	Mesh.box(d, -0.4, -0.09, 1.6, -0.3, -0.08, 1.7, C.coral)
-	Mesh.box(d, -0.25, -0.09, 1.45, -0.15, -0.08, 1.55, C.yellow)
-	Mesh.box(d, -0.55, -0.09, 1.35, -0.45, -0.08, 1.45, C.teal)
-	Mesh.box(d, -0.62, -0.085, 1.0, -0.3, -0.08, 1.3, C.white)
+	Mesh.box(d, -0.4, -0.11, 1.6, -0.3, -0.08, 1.7, C.coral)
+	Mesh.box(d, -0.25, -0.11, 1.45, -0.15, -0.08, 1.55, C.yellow)
+	Mesh.box(d, -0.55, -0.11, 1.35, -0.45, -0.08, 1.45, C.teal)
+	Mesh.box(d, -0.62, -0.095, 1.0, -0.3, -0.08, 1.3, C.white)
 	Mesh.finish(d, "fridge_door")
 	it.ent = Mesh.spawn("fridge_door", 15.9, 11.0, 0.01)
 	it.ang = 0

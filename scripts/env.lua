@@ -222,8 +222,8 @@ function city_ground(m)
 	Mesh.box(m, -170, 51, z, 190, 52, z + 0.1, C.white)
 	Mesh.box(m, -170, 63, z, 190, 64, z + 0.1, C.white)
 	-- the plaza around our tower
-	Mesh.box(m, -6, -12, z, 22, 26, z + 0.06, C.tile_lt)
-	Mesh.box(m, 3, 14, z + 0.06, 13, 22, z + 0.1, C.river)
+	Mesh.box(m, -6, -12, z, 22, 26, z + 0.08, C.tile_lt)
+	Mesh.box(m, 3, 14, z + 0.08, 13, 22, z + 0.12, C.river)
 end
 
 function city_building(m, x, y, w, d, h)
